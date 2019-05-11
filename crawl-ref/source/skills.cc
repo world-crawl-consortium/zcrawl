@@ -87,7 +87,7 @@ static const char *skill_titles[NUM_SKILLS][6] =
 #if TAG_MAJOR_VERSION == 34
     {"Traps",          "Scout",         "Disarmer",        "Vigilant",        "Perceptive",     "Dungeon Master"},
 #endif
-    // STR based fighters, for DEX/martial arts titles see below. Felids get their own category, too.
+    // STR based fighters, for DEX/martial arts titles see below. Feloids get their own category, too.
     {"Unarmed Combat", "Ruffian",       "Grappler",        "Brawler",         "Wrestler",       "@Weight@weight Champion"},
 
     {"Spellcasting",   "Magician",      "Thaumaturge",     "Eclecticist",     "Sorcerer",       "Archmage"},
@@ -1653,7 +1653,7 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
             break;
 
         case SK_UNARMED_COMBAT:
-            if (species == SP_FELID)
+            if (species == SP_FELOID)
             {
                 result = claw_and_tooth_titles[skill_rank];
                 break;

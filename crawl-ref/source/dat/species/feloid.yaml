@@ -1,7 +1,7 @@
-enum: SP_FELID
-monster: MONS_FELID
-name: "Felid"
-adjective: "Feline"
+enum: SP_FELOID
+monster: MONS_FELOID
+name: "Feloid"
+adjective: "Feloine"
 genus: "Cat"
 difficulty: Advanced
 difficulty_priority: 40

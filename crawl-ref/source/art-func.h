@@ -721,7 +721,7 @@ static void _WYRMBANE_melee_effects(item_def* weapon, actor* attacker,
 
         defender->hurt(attacker, 1 + random2(3*dam/2));
 
-        // Allow the lance to charge when killing dragonform felid players.
+        // Allow the lance to charge when killing dragonform feloid players.
         mondied = defender->is_player() ? defender->as_player()->pending_revival
                                         : !defender->alive();
     }
@@ -745,7 +745,7 @@ static void _WYRMBANE_melee_effects(item_def* weapon, actor* attacker,
     {
         weapon->plus++;
 
-        // Including you, if you were a dragonform felid with lives left.
+        // Including you, if you were a dragonform feloid with lives left.
         if (weapon->plus == 18)
         {
             mprf("<white>The lance glows brightly as it skewers %s. You feel "

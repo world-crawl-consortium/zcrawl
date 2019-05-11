@@ -1581,7 +1581,7 @@ Character
 * Wanderers can start with one elemental evoker or a box of beasts instead of
   a wand.
 * Wanderer starting equipment is noted in the game log.
-* Felids no longer have a jump-attack ability, which has been removed.
+* Feloids no longer have a jump-attack ability, which has been removed.
 * Worshippers of Kikubaaqudgha and Nemelex Xobeh will now have titles unique
   to those gods displayed when their highest skill is Necromancy or Evocations
   (respectively).
@@ -1723,7 +1723,7 @@ Items
   to eat.
 * Potions of blood no longer give nutrition for non-vampires.
 * All short blades now do piercing damage.
-* Weapons other than short blades & felid claws are all now equally good at
+* Weapons other than short blades & feloid claws are all now equally good at
   stabbing.
 * Light armour now has a small spellcast success penalty.
 * Elemental evocables now charge & discharge on a type-by-type basis, rather
@@ -2193,7 +2193,7 @@ Gods
 * Followers of good gods no longer get a chance to turn holy enemies neutral.
 * Zin's Recite no longer prompts for a book, instead affecting all monsters
   in sight with the strongest effects that would impact them.
-* Ashenzari now counts Felids as fully bound when all of their jewellery slots
+* Ashenzari now counts Feloids as fully bound when all of their jewellery slots
   are cursed.
 * Sif Muna wrath can no longer cause amnesia.
 * Gods that give missile gifts can do so sooner.
@@ -2275,9 +2275,9 @@ Character
       stasis effect.
     - Vine stalkers regenerate quickly, but cannot heal with wands or
       potions; they possess innate spirit shield and an anti-magic bite.
-* Felids have an innate jump attack ability, allowing them to jump over
+* Feloids have an innate jump attack ability, allowing them to jump over
   other monsters and attack their target in a single turn.
-* Felids can use wands.
+* Feloids can use wands.
 * Demonspawns' negative energy facet has the second level of rN replaced by
   "black mark," which gives melee attacks a chance to heal the player and apply
   a bad status to the victim.
@@ -2414,7 +2414,7 @@ Monsters
 * New uniques:
     - Asterion, a minotaur of Makhleb who flings Major Destruction and
       can employ Spectral Weapon with his demon weapon;
-    - Natasha, a felid ex-familiar with minor spellcasting abilities;
+    - Natasha, a feloid ex-familiar with minor spellcasting abilities;
     - Vashnia, leader of a squad of naga sharpshooters with translocational
       ability to match.
 * Moths of suppression, rock worms, lava fish, lemures, jellyfish, grey rats,
@@ -2512,11 +2512,11 @@ Items
 * Items on the ground are no longer subject to item destruction.
 * Mottled dragon armour now has an encumbrance rating of 5 (was 4).
 * The jumping ego (available only on boots) gives a jump attack ability
-  like that of felids.
+  like that of feloids.
 * The reaching brand for whips is no more.
 * Enchantment-like effects of chaos projectiles are now irresistible.
 * Spears, daggers, clubs, and hand axes are no longer good for throwing.
-* New "tomahawk" item: a throwing missile, usable by all non-felids, between
+* New "tomahawk" item: a throwing missile, usable by all non-feloids, between
   darts and javelins in damage.
     - Small race hunters and arcane marksmen may select tomahawks.
 * New "potion of lignification" - induces tree form.
@@ -3390,8 +3390,8 @@ Character
 * Tengu can fly when transformed.
 * Grey Draconians are better at Earth and worse at Air, get more AC, and
   no longer fumble in water.
-* Felids are better at combat and Evocations, worse at Summonings.
-* Felid pounces (sneak attacks) do more damage.
+* Feloids are better at combat and Evocations, worse at Summonings.
+* Feloid pounces (sneak attacks) do more damage.
 * The Evocations skill increases max MP.
 * Forms without some sort of hands can't use wands/etc.
 
@@ -3664,7 +3664,7 @@ Species
 * Octopodes: sentient octopuses that can wear eight rings.
 * Draconians cannot wear body armour anymore, can wear gloves and boots.
 * Centaurs can survive longer on vegetarian food.
-* Felids gain lives every three levels.
+* Feloids gain lives every three levels.
 * Minotaurs instinctively retaliate in melee.
 * New Demonspawn mutations: Foul Stench, Ignite Blood, and Augmentation.
 * Kenku are now called Tengu, and get more MP.
@@ -3911,7 +3911,7 @@ Character
 * Start Artificers with quarterstaves, instead of letting Monks choose them.
 * Rename Crusader to Skald, change starting book and skill levels.
 * Conjurers don't need to choose a book (they always get an Air/Ice book).
-* Felids: lose a level on death, gain at most nine lives, improved aptitudes.
+* Feloids: lose a level on death, gain at most nine lives, improved aptitudes.
 * Draconians are more dextrous.
 * Berserk speed-up reduced to that of haste (1.5 instead of 2).
 * All species take the same amount of time to use stairs.
@@ -4061,7 +4061,7 @@ Stone Soup 0.8.1 (20110612)
 * Ashenzari worshippers no longer can change armour under cursed cloaks.
 * Glyphs not present in the locale won't cause display corruption in some
   cases (mostly LC_CTYPE=C).
-* Fixes massive slowdown for resting felids.
+* Fixes massive slowdown for resting feloids.
 * Removes (or reduce) chances for save corruption on MacOS X.
 * Fixed Kikubaaqudgha's torment invocation not granting xp.
 
@@ -4076,7 +4076,7 @@ Breaks save compatibility with the 0.7 release.
 --------------
 * New game mode: Zot Defence, a tower defence mini-game.
 * New god: Ashenzari, god of divinations.
-* New species: Felids, sentient cats.
+* New species: Feloids, sentient cats.
 * New spells: Malign Gateway, Tornado, Leda's Liquefaction, Summon Dragon,
   Summon Hydra, Darkness.
 * Removed spells: Bone Shards, Tame Beasts, Portal, Alter Self, Extension.
@@ -4136,7 +4136,7 @@ Gods
 
 Character
 ---------
-* New species: Felids, sentient cats.
+* New species: Feloids, sentient cats.
 * Increased GDR from body armour. New GDR formula: 14 * (baseAC-2)^(1/2).
 * XP from monster kills is proportional to the damage dealt by player/allies
   out of total damage.

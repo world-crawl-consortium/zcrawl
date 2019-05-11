@@ -669,7 +669,7 @@ string describe_mutations(bool drop_title)
             !form_keeps_mutations());
     }
 
-    if (you.species != SP_FELID)
+    if (you.species != SP_FELOID)
     {
         switch (you.body_size(PSIZE_TORSO, true))
         {
@@ -1268,9 +1268,9 @@ bool physiology_mutation_conflict(mutation_type mutat)
         return true;
     }
 
-    // Felids have innate claws, and unlike trolls/ghouls, there are no
+    // Feloids have innate claws, and unlike trolls/ghouls, there are no
     // increases for them. And octopodes have no hands.
-    if ((you.species == SP_FELID || you.species == SP_OCTOPODE)
+    if ((you.species == SP_FELOID || you.species == SP_OCTOPODE)
          && mutat == MUT_CLAWS)
     {
         return true;
@@ -1614,7 +1614,7 @@ bool mutate(mutation_type which_mutation, const string &reason, bool failMsg,
         case MUT_LARGE_BONE_PLATES:
             {
                 const char *arms;
-                if (you.species == SP_FELID)
+                if (you.species == SP_FELOID)
                     arms = "legs";
                 else if (you.species == SP_OCTOPODE)
                     arms = "tentacles";
@@ -1630,7 +1630,7 @@ bool mutate(mutation_type which_mutation, const string &reason, bool failMsg,
         case MUT_MISSING_HAND:
             {
                 const char *hands;
-                if (you.species == SP_FELID)
+                if (you.species == SP_FELOID)
                     hands = "front paws";
                 else if (you.species == SP_OCTOPODE)
                     hands = "tentacles";
@@ -2228,7 +2228,7 @@ string mutation_desc(mutation_type mut, int level, bool colour,
         ostr << mdef.have[level - 1] << sanguine_armour_bonus() / 100 << ")";
         result = ostr.str();
     }
-    else if (!ignore_player && you.species == SP_FELID && mut == MUT_CLAWS)
+    else if (!ignore_player && you.species == SP_FELOID && mut == MUT_CLAWS)
         result = "You have sharp claws.";
     else if (have_passive(passive_t::no_mp_regen) && mut == MUT_ANTIMAGIC_BITE)
         result = "Your bite disrupts the magic of your enemies.";

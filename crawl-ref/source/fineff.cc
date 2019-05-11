@@ -520,8 +520,8 @@ void rakshasa_clone_fineff::fire()
 void bennu_revive_fineff::fire()
 {
     // Bennu only resurrect once and immediately in the same spot,
-    // so this is rather abbreviated compared to felids.
-    // XXX: Maybe generalize felid_revives and merge the two anyway?
+    // so this is rather abbreviated compared to feloids.
+    // XXX: Maybe generalize feloid_revives and merge the two anyway?
 
     bool res_visible = you.see_cell(posn);
 

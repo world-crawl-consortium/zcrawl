@@ -38,7 +38,7 @@ raiju CORPSE_RAIJU
 hell_hog CORPSE_HELL_HOG
 black_bear CORPSE_BLACK_BEAR
 polar_bear CORPSE_POLAR_BEAR
-%sdir player/felids
+%sdir player/feloids
 cat1 CORPSE_FELID
 %sdir mon/animals
 

@@ -837,7 +837,7 @@ feature mimic
 
 Une bestiole vicieuse qui se fait passer pour un objet quelconque du donjon.
 %%%%
-felid
+feloid
 
 Une créature féline qui a reçu la sentience par des moyens magiques. Elle
 utilise le don de la parole pour demander du lait, des caresses et de la

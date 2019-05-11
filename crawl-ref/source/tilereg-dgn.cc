@@ -624,7 +624,7 @@ static bool _have_appropriate_spell(const actor* target)
 
 static bool _can_fire_item()
 {
-    return you.species != SP_FELID
+    return you.species != SP_FELOID
            && you.m_quiver.get_fire_item() != -1;
 }
 
@@ -1135,7 +1135,7 @@ bool tile_dungeon_tip(const coord_def &gc, string &tip)
                 }
             }
 
-            if (you.species != SP_FELID
+            if (you.species != SP_FELOID
                 && you.see_cell_no_trans(target->pos())
                 && you.m_quiver.get_fire_item() != -1)
             {

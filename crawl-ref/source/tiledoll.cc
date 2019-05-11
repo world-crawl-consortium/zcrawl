@@ -288,7 +288,7 @@ void fill_doll_equipment(dolls_data &result)
         {
         case SP_CENTAUR: ch = TILEP_TRAN_STATUE_CENTAUR;  break;
         case SP_NAGA:    ch = TILEP_TRAN_STATUE_NAGA;     break;
-        case SP_FELID:   ch = TILEP_TRAN_STATUE_FELID;    break;
+        case SP_FELOID:   ch = TILEP_TRAN_STATUE_FELID;    break;
         case SP_OCTOPODE:ch = TILEP_TRAN_STATUE_OCTOPODE; break;
         default:         ch = TILEP_TRAN_STATUE_HUMANOID; break;
         }
@@ -302,7 +302,7 @@ void fill_doll_equipment(dolls_data &result)
         {
         case SP_CENTAUR: ch = TILEP_TRAN_LICH_CENTAUR;  break;
         case SP_NAGA:    ch = TILEP_TRAN_LICH_NAGA;     break;
-        case SP_FELID:   ch = TILEP_TRAN_LICH_FELID;    break;
+        case SP_FELOID:   ch = TILEP_TRAN_LICH_FELID;    break;
         case SP_OCTOPODE:ch = TILEP_TRAN_LICH_OCTOPODE; break;
         default:         ch = TILEP_TRAN_LICH_HUMANOID; break;
         }
@@ -401,12 +401,12 @@ void fill_doll_equipment(dolls_data &result)
             result.parts[TILEP_PART_HELM] = tilep_equ_helm(you.inv[item]);
         else if (you.get_mutation_level(MUT_HORNS) > 0)
         {
-            if (you.species == SP_FELID)
+            if (you.species == SP_FELOID)
             {
                 if (is_player_tile(result.parts[TILEP_PART_BASE],
                                   TILEP_BASE_FELID))
                 {
-                    // Felid horns are offset by the tile variant.
+                    // Feloid horns are offset by the tile variant.
                     result.parts[TILEP_PART_HELM] = TILEP_HELM_HORNS_CAT
                         + result.parts[TILEP_PART_BASE] - TILEP_BASE_FELID;
                 }

@@ -508,9 +508,9 @@ prissy
 underdone
 %%%%
 ##########################################################
-# adjective1, Felid special
+# adjective1, Feloid special
 ##########################################################
-insult felid adj1
+insult feloid adj1
 
 matted
 
@@ -773,9 +773,9 @@ thigh-biting
 dirt-delving
 %%%%
 ##########################################################
-# adjective2, Felid special
+# adjective2, Feloid special
 ##########################################################
-insult felid adj2
+insult feloid adj2
 
 worm-riddled
 
@@ -1167,9 +1167,9 @@ half-pint
 weenchy-treat
 %%%%
 ##########################################################
-# noun, Felid special
+# noun, Feloid special
 ##########################################################
-insult felid noun
+insult feloid noun
 
 kitten
 

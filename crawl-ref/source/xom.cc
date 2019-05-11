@@ -2158,7 +2158,7 @@ static void _get_hand_type(string &hand, bool &can_plural)
     }
 
     if (!form_changed_physiology()
-        && you.species != SP_FELID && you.species != SP_OCTOPODE)
+        && you.species != SP_FELOID && you.species != SP_OCTOPODE)
     {
         hand_vec.emplace_back("elbow");
         plural_vec.push_back(true);
@@ -2836,7 +2836,7 @@ static void _handle_accidental_death(const int orig_hp,
     if ((!you.did_escape_death()
          && you.escaped_death_aux.empty()
          && !_player_is_dead())
-        || you.pending_revival) // don't let xom take credit for felid revival
+        || you.pending_revival) // don't let xom take credit for feloid revival
     {
         // The player is fine.
         return;

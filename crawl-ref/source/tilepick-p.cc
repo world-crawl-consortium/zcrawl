@@ -614,7 +614,7 @@ tileidx_t tilep_species_to_base_tile(int sp, int level)
         return TILEP_BASE_DEEP_DWARF;
     case SP_GARGOYLE:
         return TILEP_BASE_GARGOYLE;
-    case SP_FELID:
+    case SP_FELOID:
         return TILEP_BASE_FELID;
     case SP_OCTOPODE:
         return TILEP_BASE_OCTOPODE;
@@ -1032,7 +1032,7 @@ void tilep_calc_flags(const dolls_data &doll, int flag[])
                             TILEP_BASE_FELID)
             && (!is_player_tile(doll.parts[TILEP_PART_BASE],
                                 TILEP_TRAN_STATUE_FELID)
-            // Every felid tile has its own horns.
+            // Every feloid tile has its own horns.
             || doll.parts[TILEP_PART_BASE] - TILEP_BASE_FELID
                != doll.parts[TILEP_PART_HELM] - TILEP_HELM_HORNS_CAT)))
     {

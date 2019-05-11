@@ -2200,7 +2200,7 @@ static const char* old_species[]=
     "Red Draconian", "White Draconian", "Green Draconian", "Yellow Draconian",
     "Grey Draconian", "Black Draconian", "Purple Draconian", "Mottled Draconian",
     "Pale Draconian", "Draconian", "Centaur", "Demigod", "Spriggan", "Minotaur",
-    "Demonspawn", "Ghoul", "Tengu", "Merfolk", "Vampire", "Deep Dwarf", "Felid",
+    "Demonspawn", "Ghoul", "Tengu", "Merfolk", "Vampire", "Deep Dwarf", "Feloid",
     "Octopode",
 };
 
@@ -3030,13 +3030,13 @@ static void tag_read_you(reader &th)
     }
 
     if (th.getMinorVersion() < TAG_MINOR_NO_JUMP
-        && you.species == SP_FELID && you.innate_mutation[MUT_JUMP] != 0)
+        && you.species == SP_FELOID && you.innate_mutation[MUT_JUMP] != 0)
     {
         you.mutation[MUT_JUMP] = 0;
     }
 
-    // No minor version needed: all old felids should get MUT_PAWS.
-    if (you.species == SP_FELID && you.innate_mutation[MUT_PAWS] < 1)
+    // No minor version needed: all old feloids should get MUT_PAWS.
+    if (you.species == SP_FELOID && you.innate_mutation[MUT_PAWS] < 1)
         you.mutation[MUT_PAWS] = you.innate_mutation[MUT_PAWS] = 1;
 
     if (th.getMinorVersion() < TAG_MINOR_SPIT_POISON

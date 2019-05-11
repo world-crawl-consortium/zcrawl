@@ -38,9 +38,9 @@ Formicid
 Formicids are humanoid ants adept at digging. Their limbs are exceptionally
 strong and they live in a state of permanent stasis.
 %%%%
-Felid
+Feloid
 
-Felids are many-lived cats possessing sentience. They are incapable of advanced
+Feloids are many-lived cats possessing sentience. They are incapable of advanced
 item manipulation or the use of armour or weapons.
 %%%%
 Ghoul

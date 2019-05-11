@@ -1074,7 +1074,7 @@ faun
 A hybrid with the torso of a human atop the forelegs of a goat. It is fabled
 for its ability to play with the minds of those who intrude into its domain.
 %%%%
-felid
+feloid
 
 A feline creature that has been granted sentience by magical means. It uses the
 gift of speech to demand milk, treats and catnip.

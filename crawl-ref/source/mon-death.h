@@ -74,7 +74,7 @@ void elven_twins_unpacify(monster* twin);
 
 void hogs_to_humans();
 
-bool mons_felid_can_revive(const monster* mons);
-void mons_felid_revive(monster* mons);
+bool mons_feloid_can_revive(const monster* mons);
+void mons_feloid_revive(monster* mons);
 
 bool mons_bennu_can_revive(const monster* mons);

@@ -266,7 +266,7 @@ Magic Resistance
   '@' or '%'.
 
 Size
-  Different species have different sizes: Spriggans and Felids are very small;
+  Different species have different sizes: Spriggans and Feloids are very small;
   Halflings and Kobolds are small; Ogres and Trolls are large; Nagas and Centaurs
   are large with a medium torso; all other species are medium-sized. Many
   transmutations will change your size too. Size affects your evasion: the
@@ -1838,23 +1838,23 @@ Octopodes (Op)
   knowledge of poisons as well. They are also able to use their tentacles to
   constrict enemies - potentially several at a time!
 
-Felids (Fe)
-  Felids are a breed of cats that have been granted sentience. Originally they
+Feloids (Fe)
+  Feloids are a breed of cats that have been granted sentience. Originally they
   were witches' familiars that were magically augmented to provide help for
   their masters' rituals, yet many have abandoned, outlived, or, in at least one
   case, eviscerated their former masters and gone out into the world.
 
-  While fully capable of using speech and most forms of magic, Felids are at a
+  While fully capable of using speech and most forms of magic, Feloids are at a
   serious disadvantage due to their inability to use armour or weapons. Like all
-  cats, Felids are incapable of thriving on vegetable food, and need meat to
+  cats, Feloids are incapable of thriving on vegetable food, and need meat to
   survive.
 
   Their agility and stealth are legendary, as is their ability to get to hard to
   reach places. They move faster than most races, but don't run as fast as
-  Centaurs or Spriggans. Felids advance in levels very slowly. They are skilled
+  Centaurs or Spriggans. Feloids advance in levels very slowly. They are skilled
   with many forms of magic, though less so with raw elemental magic.
 
-  Felids gain extra lives as they increase in levels. Upon death, they will be
+  Feloids gain extra lives as they increase in levels. Upon death, they will be
   resurrected in a safe place, losing an experience level in the process.
 
 Barachim (Ba)
@@ -2245,7 +2245,7 @@ Stealth
 
   Stealth also helps you make a very powerful first strike against a
   sleeping/resting monster who hasn't noticed you yet. This is most effective
-  with a dagger, slightly less effective with other short blades and Felid claws,
+  with a dagger, slightly less effective with other short blades and Feloid claws,
   and less useful (although still by no means negligible) with any other weapon.
 
   Stealth also improves some melee attacks against confused, distracted, or

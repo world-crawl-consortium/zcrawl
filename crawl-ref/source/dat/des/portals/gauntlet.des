@@ -1130,8 +1130,8 @@ dgn.delayed_decay_extra(_G, "O", "octopode corpse",
     "    / shield good_item / large shield good_item / any wand w:20" ..
     "    / any misc / gold / any scroll / any potion / nothing w:180")
 
--- Felid Transmuter.
-dgn.delayed_decay_extra(_G, "P", "felid skeleton",
+-- Feloid Transmuter.
+dgn.delayed_decay_extra(_G, "P", "feloid skeleton",
     "randbook disc:transmutation / book of changes" ..
     "    / book of transfigurations" ..
     ", any jewellery good_item w:60 / manual of transmutations" ..

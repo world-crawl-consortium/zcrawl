@@ -99,7 +99,7 @@ void give_specific_item(monster* mon, const item_def& tpl)
 static bool _should_give_unique_item(monster* mon)
 {
     // Don't give Natasha an item for dying.
-    return mon->type != MONS_NATASHA || !mon->props.exists("felid_revives");
+    return mon->type != MONS_NATASHA || !mon->props.exists("feloid_revives");
 }
 
 static void _give_book(monster* mon, int level)

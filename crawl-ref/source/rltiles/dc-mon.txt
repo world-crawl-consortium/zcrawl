@@ -89,8 +89,8 @@ hog MONS_HOG
 hell_hog MONS_HELL_HOG
 holy_swine MONS_HOLY_SWINE
 %rim 1
-%sdir player/felids
-cat4 MONS_FELID
+%sdir player/feloids
+cat4 MONS_FELOID
 %rim 0
 %sdir mon/unique
 natasha MONS_NATASHA
@@ -1131,7 +1131,7 @@ statue_form_centaur TRAN_STATUE_CENTAUR
 statue_form_naga TRAN_STATUE_NAGA
 statue_form_octopode TRAN_STATUE_OCTOPODE
 %syn TRAN_STATUE_EQUIP_LAST
-statue_form_felid TRAN_STATUE_FELID
+statue_form_feloid TRAN_STATUE_FELID
 dragon_form TRAN_DRAGON
 dragon_form_red TRAN_DRAGON_RED
 dragon_form_white TRAN_DRAGON_WHITE
@@ -1147,7 +1147,7 @@ lich_form_centaur TRAN_LICH_CENTAUR
 lich_form_naga TRAN_LICH_NAGA
 lich_form_octopode TRAN_LICH_OCTOPODE
 %syn TRAN_LICH_EQUIP_LAST
-lich_form_felid TRAN_LICH_FELID
+lich_form_feloid TRAN_LICH_FELID
 tree_form TRAN_TREE
 %rim 0
 mushroom_form TRAN_MUSHROOM

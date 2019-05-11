@@ -1024,7 +1024,7 @@ void attack::stab_message()
         if (coinflip())
         {
             mprf("You %s %s from a blind spot!",
-                  (you.species == SP_FELID) ? "pounce on" : "strike",
+                  (you.species == SP_FELOID) ? "pounce on" : "strike",
                   defender->name(DESC_THE).c_str());
         }
         else
@@ -1042,13 +1042,13 @@ void attack::stab_message()
         else
         {
             mprf("You %s %s from behind!",
-                  (you.species == SP_FELID) ? "pounce on" : "strike",
+                  (you.species == SP_FELOID) ? "pounce on" : "strike",
                   defender->name(DESC_THE).c_str());
         }
         break;
     case 2:
     case 1:
-        if (you.species == SP_FELID && coinflip())
+        if (you.species == SP_FELOID && coinflip())
         {
             mprf("You pounce on the unaware %s!",
                  defender->name(DESC_PLAIN).c_str());

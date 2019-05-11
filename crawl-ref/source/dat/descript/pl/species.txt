@@ -28,7 +28,7 @@ Draconian
 Smokowcy mają naturalny pancerz, lecz nie mogą nosić zbroi. Na 7ym poziomie
 osiągają dojrzałość i ujawniają swój kolor.
 %%%%
-Felid
+Feloid
 
 Te koty o wielu żywotach posiadają ludzki umysł, lecz brak im chwytnych
 kończyn, nie pozwalając na użycie większości przedmiotów.

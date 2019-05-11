@@ -35,7 +35,7 @@ Les Formicids sont des fourmis humanoïdes adepte de l'excavation. Leurs membres
 sont exceptionnellement fort et ils vivent dans un environnement où l’évolution
 naturel a cessé.
 %%%%
-Felid
+Feloid
 
 Ces chats sont dotés de conscience, mais sont incapables de manipuler des
 objets complexes, ou d'utiliser des armes ou armures.

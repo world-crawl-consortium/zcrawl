@@ -698,7 +698,7 @@ maybe_bool you_can_wear(equipment_type eq, bool temp)
 
     case EQ_WEAPON:
     case EQ_STAFF:
-        return you.species == SP_FELID ? MB_FALSE :
+        return you.species == SP_FELOID ? MB_FALSE :
                you.body_size(PSIZE_TORSO, !temp) < SIZE_MEDIUM ? MB_MAYBE :
                                          MB_TRUE;
 
@@ -780,7 +780,7 @@ maybe_bool you_can_wear(equipment_type eq, bool temp)
 bool player_has_feet(bool temp, bool include_mutations)
 {
     if (you.species == SP_NAGA
-        || you.species == SP_FELID
+        || you.species == SP_FELOID
         || you.species == SP_OCTOPODE
         || you.fishtail && temp)
     {
@@ -2682,7 +2682,7 @@ bool will_gain_life(int lev)
     return you.lives + you.deaths < (lev - 1) / 3;
 }
 
-static void _felid_extra_life()
+static void _feloid_extra_life()
 {
     if (will_gain_life(you.max_level)
         && you.lives < 2)
@@ -3010,8 +3010,8 @@ void level_change(bool skip_attribute_increase)
                 break;
             }
 
-            case SP_FELID:
-                _felid_extra_life();
+            case SP_FELOID:
+                _feloid_extra_life();
                 break;
 
             default:
@@ -3042,8 +3042,8 @@ void level_change(bool skip_attribute_increase)
         ASSERT(you.experience_level == you.get_max_xl());
         ASSERT(you.max_level < 127); // marshalled as an 1-byte value
         you.max_level++;
-        if (you.species == SP_FELID)
-            _felid_extra_life();
+        if (you.species == SP_FELOID)
+            _feloid_extra_life();
     }
 
     you.redraw_title = true;
@@ -3077,7 +3077,7 @@ void adjust_level(int diff, bool just_xp)
                 exp_needed(max_exp_level))
         {
             // Having XP for level 53 and going back to 26 due to a single
-            // card would mean your felid is not going to get any extra lives
+            // card would mean your feloid is not going to get any extra lives
             // in foreseable future.
             you.experience -= exp_needed(max_exp_level)
                     - exp_needed(max_exp_level - 1);
@@ -3161,7 +3161,7 @@ int player_stealth()
     if (you.duration[DUR_AGILITY])
         stealth += STEALTH_PIP;
 
-    if (you.form == transformation::blade_hands && you.species == SP_FELID
+    if (you.form == transformation::blade_hands && you.species == SP_FELOID
         && !you.airborne())
     {
         stealth -= STEALTH_PIP; // klack klack klack go the blade paws
@@ -3209,7 +3209,7 @@ int player_stealth()
             stealth += STEALTH_PIP;
         else if (you.has_usable_hooves())
             stealth -= 5 + 5 * you.get_mutation_level(MUT_HOOVES);
-        else if (you.species == SP_FELID
+        else if (you.species == SP_FELOID
                  && (you.form == transformation::none
                      || you.form == transformation::appendage))
         {
@@ -5440,7 +5440,7 @@ bool player::cannot_speak() const
 }
 
 static const string shout_verbs[] = {"shout", "yell", "scream"};
-static const string felid_shout_verbs[] = {"meow", "yowl", "caterwaul"};
+static const string feloid_shout_verbs[] = {"meow", "yowl", "caterwaul"};
 static const string frog_shout_verbs[] = {"ribbit", "croak", "bellow"};
 static const string dog_shout_verbs[] = {"bark", "howl", "screech"};
 
@@ -5461,11 +5461,11 @@ string player::shout_verb(bool directed) const
         return dog_shout_verbs[screaminess];
     if (species == SP_BARACHI)
         return frog_shout_verbs[screaminess];
-    if (species != SP_FELID)
+    if (species != SP_FELOID)
         return shout_verbs[screaminess];
     if (directed && screaminess == 0)
         return "hiss"; // hiss at, not meow at
-    return felid_shout_verbs[screaminess];
+    return feloid_shout_verbs[screaminess];
 }
 
 /**

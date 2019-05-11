@@ -1519,7 +1519,7 @@ static void _experience_check()
         mpr("With the way you've been playing, I'm surprised you got this far.");
     }
 
-    if (you.species == SP_FELID)
+    if (you.species == SP_FELOID)
     {
         int xl = you.experience_level;
         // calculate the "real" level
@@ -1557,7 +1557,7 @@ static void _experience_check()
 
 static void _do_remove_armour()
 {
-    if (you.species == SP_FELID)
+    if (you.species == SP_FELOID)
     {
         mpr("You can't remove your fur, sorry.");
         return;
@@ -1637,7 +1637,7 @@ static void _do_display_map()
 
 static void _do_cycle_quiver(int dir)
 {
-    if (you.species == SP_FELID)
+    if (you.species == SP_FELOID)
     {
         mpr("You can't grasp things well enough to throw them.");
         return;

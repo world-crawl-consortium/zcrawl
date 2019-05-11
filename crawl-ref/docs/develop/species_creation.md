@@ -14,7 +14,7 @@ You can view existing files to get a sense of the format, it's quite straightfor
 | ---- | ---- | -------- | ----------- |
 | enum | `string` | **Yes** | Set the species enum. Must match the pattern `SP_[A-Z_]+`. |
 | monster | `string` | **Yes** | Species' corresponding monster. Must match the pattern `MONS_[A-Z_]+`. |
-| name | `string` | **Yes** | Species name, like 'Deep Dwarf' or 'Felid'. Required. Must be unique. |
+| name | `string` | **Yes** | Species name, like 'Deep Dwarf' or 'Feloid'. Required. Must be unique. |
 | short_name | `string` | No | Two letter species code. Must be unique (excepting special cases like Draconian sub-species). Defaults to the first two letters of the name. |
 | adjective | `string` | No | Species adjective, like 'Dwarven' or 'Feline'. Defaults to `$name`. |
 | genus | `string` | No | Species genus, like 'Dwarf' or 'Cat'. Defaults to `$name`.

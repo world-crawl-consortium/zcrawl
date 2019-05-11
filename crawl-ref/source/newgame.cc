@@ -2120,7 +2120,7 @@ static bool _choose_weapon(newgame_def& ng, newgame_def& ng_choice,
                            const newgame_def& defaults)
 {
     // No weapon use at all. The actual item will be removed later.
-    if (ng.species == SP_FELID)
+    if (ng.species == SP_FELOID)
         return true;
 
     if (!job_has_weapon_choice(ng.job))

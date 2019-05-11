@@ -648,7 +648,7 @@ void ash_check_bondage(bool msg)
 
     you.bondage_level = 0;
     // kittehs don't obey hoomie rules!
-    if (you.species == SP_FELID)
+    if (you.species == SP_FELOID)
     {
         for (int i = EQ_LEFT_RING; i <= EQ_AMULET; ++i)
             if (you.equip[i] != -1 && you.inv[you.equip[i]].cursed())

@@ -4414,7 +4414,7 @@ bool gozag_call_merchant()
             continue;
         if (type == SHOP_EVOKABLES && you.get_mutation_level(MUT_NO_ARTIFICE))
             continue;
-        if (you.species == SP_FELID &&
+        if (you.species == SP_FELOID &&
             (type == SHOP_ARMOUR
              || type == SHOP_ARMOUR_ANTIQUE
              || type == SHOP_WEAPON

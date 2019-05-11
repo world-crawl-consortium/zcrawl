@@ -2537,9 +2537,9 @@ item_def* monster_die(monster& mons, killer_type killer,
             hogs_to_humans();
         }
         else if ((mons_is_mons_class(&mons, MONS_NATASHA)
-                  || mons_genus(mons.type) == MONS_FELID)
+                  || mons_genus(mons.type) == MONS_FELOID)
                  && !in_transit && !mons.pacified()
-                 && mons_felid_can_revive(&mons))
+                 && mons_feloid_can_revive(&mons))
         {
             drop_items = false;
 
@@ -2547,7 +2547,7 @@ item_def* monster_die(monster& mons, killer_type killer,
             if (mons_is_mons_class(&mons, MONS_NATASHA))
                 you.unique_creatures.set(MONS_NATASHA, false);
             if (!mons_reset && !wizard)
-                mons_felid_revive(&mons);
+                mons_feloid_revive(&mons);
         }
         else if (mons_is_mons_class(&mons, MONS_PIKEL))
         {
@@ -3438,13 +3438,13 @@ void elven_twins_unpacify(monster* twin)
     behaviour_event(mons, ME_WHACK, &you, you.pos(), false);
 }
 
-bool mons_felid_can_revive(const monster* mons)
+bool mons_feloid_can_revive(const monster* mons)
 {
-    return !mons->props.exists("felid_revives")
-           || mons->props["felid_revives"].get_byte() < 2;
+    return !mons->props.exists("feloid_revives")
+           || mons->props["feloid_revives"].get_byte() < 2;
 }
 
-void mons_felid_revive(monster* mons)
+void mons_feloid_revive(monster* mons)
 {
     // FIXME: this should be a fineff like bennu_revive_fineff. But that
     // is tricky because the original actor will be dead (and not carrying
@@ -3475,8 +3475,8 @@ void mons_felid_revive(monster* mons)
 
     monster_type type = mons_is_mons_class(mons, MONS_NATASHA) ? MONS_NATASHA
                                                                : mons->type;
-    const int revives = (mons->props.exists("felid_revives"))
-                        ? mons->props["felid_revives"].get_byte() + 1
+    const int revives = (mons->props.exists("feloid_revives"))
+                        ? mons->props["feloid_revives"].get_byte() + 1
                         : 1;
 
     monster *newmons =
@@ -3492,7 +3492,7 @@ void mons_felid_revive(monster* mons)
             destroy_item(ii->index());
         }
 
-        newmons->props["felid_revives"].get_byte() = revives;
+        newmons->props["feloid_revives"].get_byte() = revives;
     }
 }
 

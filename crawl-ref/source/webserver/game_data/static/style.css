@@ -122,7 +122,7 @@ body {
     background-color: #204a87; /* blue */
 }
 
-#stats[data-species="Felid"] #stats_quiver_line {
+#stats[data-species="Feloid"] #stats_quiver_line {
     display: none;
 }
 
