@@ -460,6 +460,10 @@ void moveto_location_effects(dungeon_feature_type old_feat,
                     if (you.invisible())
                         mpr("...and don't expect to remain undetected.");
                 }
+
+                if (you.species == SP_FELOID && you.duration[DUR_WATER_HOLD] == 0)
+                    you.duration[DUR_WATER_HOLD] = 10;
+
             }
 
             if (you.species == SP_OCTOPODE
@@ -4956,6 +4960,9 @@ bool player::clear_far_engulf()
     if (!you.duration[DUR_WATER_HOLD])
         return false;
 
+    if (you.species == SP_FELOID && env.grid(you.pos()) == DNGN_SHALLOW_WATER && !you.airborne())
+        return false;
+
     monster * const mons = monster_by_mid(you.props["water_holder"].get_int());
     if (!mons || !mons->alive() || !adjacent(mons->pos(), you.pos()))
     {
@@ -4986,7 +4993,10 @@ void handle_player_drowning(int delay)
             div_rand_round((28 + stepdown((float)you.duration[DUR_WATER_HOLD], 28.0))
                             * delay,
                             BASELINE_DELAY * 10);
-        ouch(dam, KILLED_BY_WATER, you.props["water_holder"].get_int());
+        if (you.species == SP_FELOID && env.grid(you.pos()) == DNGN_SHALLOW_WATER && !you.airborne())
+            ouch(dam / 2, KILLED_BY_WATER);
+        else
+            ouch(dam, KILLED_BY_WATER, you.props["water_holder"].get_int());
         mprf(MSGCH_WARN, "Your lungs strain for air!");
     }
 }
