@@ -7,7 +7,7 @@ difficulty: Advanced
 difficulty_priority: 40
 aptitudes:
   xp: -1
-  hp: -4
+  hp: -7
   mp_mod: 1
   mr: 6
   short_blades: False
