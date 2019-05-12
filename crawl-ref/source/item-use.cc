@@ -690,7 +690,7 @@ static int armour_equip_delay(const item_def &item)
 bool can_wear_armour(const item_def &item, bool verbose, bool ignore_temporary)
 {
     const object_class_type base_type = item.base_type;
-    if (base_type != OBJ_ARMOUR || you.species == SP_FELOID)
+    if (base_type != OBJ_ARMOUR)
     {
         if (verbose)
             mpr("You can't wear that.");
@@ -700,6 +700,13 @@ bool can_wear_armour(const item_def &item, bool verbose, bool ignore_temporary)
 
     const int sub_type = item.sub_type;
     const equipment_type slot = get_armour_slot(item);
+
+    if (you.species == SP_FELOID && sub_type != ARM_SCARF)
+    {
+        if (verbose)
+            mpr("You can't wear that!");
+        return false;
+    }
 
     if (you.species == SP_OCTOPODE && slot != EQ_HELMET && slot != EQ_SHIELD)
     {
@@ -1008,12 +1015,6 @@ bool wear_armour(int item)
     // conditions that would make it impossible to wear any type of armour.
     // TODO: perhaps also worth checking here whether all available armour slots
     // are cursed. Same with jewellery.
-    if (you.species == SP_FELOID)
-    {
-        mpr("You can't wear anything.");
-        return false;
-    }
-
     if (!form_can_wear())
     {
         mpr("You can't wear anything in your present form.");
