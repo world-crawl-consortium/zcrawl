@@ -54,6 +54,7 @@ mutations:
     MUT_PAWS: 1
     MUT_SLOW_METABOLISM: 1
     MUT_CLAWS: 1
+    MUT_WHISKERS: 1
   6:
     MUT_SHAGGY_FUR: 1
   12:

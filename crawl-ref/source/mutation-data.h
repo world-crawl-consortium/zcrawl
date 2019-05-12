@@ -1912,6 +1912,14 @@ static const mutation_def mut_data[] =
   {"You feel resistant to acid.", "",  ""},
   {"You feel less resistant to acid.", "", ""},
 },
+
+{ MUT_WHISKERS, 2, 1, mutflag::good, true,
+  "whiskers",
+
+  {"Your whiskers allow you to detect enemies. (+Detection)", "", ""},
+  {"You feel a prickling sensation.", "", ""},
+  {"Your cheeks feel normal again.", "", ""},
+},
 };
 
 static const mutation_category_def category_mut_data[] =

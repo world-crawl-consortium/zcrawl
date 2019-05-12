@@ -6954,6 +6954,19 @@ int player::has_usable_tentacles(bool allow_tran) const
     return has_tentacles(allow_tran);
 }
 
+int player::has_whiskers(bool allow_tran) const
+{
+    return get_mutation_level(MUT_WHISKERS, allow_tran);
+}
+
+int player::has_usable_whiskers(bool allow_tran) const
+{
+    if (you.equip[EQ_HELMET] != -1 && is_hard_helmet(you.inv[you.equip[EQ_HELMET]]))
+        return 0;
+
+    return has_whiskers(allow_tran);
+}
+
 bool player::sicken(int amount)
 {
     ASSERT(!crawl_state.game_is_arena());
@@ -7647,7 +7660,9 @@ static string _constriction_description()
 **/
 int player_monster_detect_radius()
 {
-    int radius = you.get_mutation_level(MUT_ANTENNAE) * 2;
+    int radius = you.has_usable_whiskers(true) * 4;
+    if (you.get_mutation_level(MUT_ANTENNAE) > you.has_usable_whiskers(true))
+        radius = you.get_mutation_level(MUT_ANTENNAE) * 2;
 
     if (player_equip_unrand(UNRAND_BOOTS_ASSASSIN))
         radius = max(radius, 4);
