@@ -2678,26 +2678,6 @@ void gain_exp(unsigned int exp_gained, unsigned int* actual_gain)
         *actual_gain = you.experience - old_exp;
 }
 
-bool will_gain_life(int lev)
-{
-    if (lev < you.attribute[ATTR_LIFE_GAINED] - 2)
-        return false;
-
-    return you.lives + you.deaths < (lev - 1) / 3;
-}
-
-static void _feloid_extra_life()
-{
-    if (will_gain_life(you.max_level)
-        && you.lives < 2)
-    {
-        you.lives++;
-        mprf(MSGCH_INTRINSIC_GAIN, "Extra life!");
-        you.attribute[ATTR_LIFE_GAINED] = you.max_level;
-        // Should play the 1UP sound from SMB...
-    }
-}
-
 static void _gain_and_note_hp_mp()
 {
     const int old_mp = you.magic_points;
@@ -3014,10 +2994,6 @@ void level_change(bool skip_attribute_increase)
                 break;
             }
 
-            case SP_FELOID:
-                _feloid_extra_life();
-                break;
-
             default:
                 break;
             }
@@ -3046,8 +3022,6 @@ void level_change(bool skip_attribute_increase)
         ASSERT(you.experience_level == you.get_max_xl());
         ASSERT(you.max_level < 127); // marshalled as an 1-byte value
         you.max_level++;
-        if (you.species == SP_FELOID)
-            _feloid_extra_life();
     }
 
     you.redraw_title = true;
